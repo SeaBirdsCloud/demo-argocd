@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: backend
-        image: localhost/quotes-backend:latest
+        image: perdixcloud/quotes-backend:1.0
         ports:
         - containerPort: 8000

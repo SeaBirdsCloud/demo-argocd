@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: localhost/quotes-frontend:latest
+        image: perdixcloud/quotes-frontend:1.0
         ports:
         - containerPort: 80
