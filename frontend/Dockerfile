@@ -8,7 +8,7 @@ COPY package*.json ./
 # Instala as dependências do projeto
 RUN npm install
 
-# 👉 instala o framer-motion (usado no QuoteCard)
+# instala o framer-motion (usado no QuoteCard)
 RUN npm install framer-motion
 RUN npm install -D tailwindcss postcss autoprefixer
 

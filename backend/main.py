@@ -19,9 +19,9 @@ quotes = [
 ]
 
 @app.get("/")
-def root():
-    return {"message": "Quotes API running 🚀"}
-
-@app.get("/quote")
 def get_quote():
     return random.choice(quotes)
+
+@app.get("/api")
+def root():
+    return {"message": "Quotes API running 🚀"}

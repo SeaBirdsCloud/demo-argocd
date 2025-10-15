@@ -5,7 +5,7 @@ function App() {
   const [quote, setQuote] = useState(null)
 
   const fetchQuote = async () => {
-    const res = await fetch('http://localhost:8000/quote')
+    const res = await fetch('/quote')
     const data = await res.json()
     setQuote(data)
   }
@@ -39,7 +39,7 @@ function App() {
         </main>
 
         {/* Footer */}
-        <footer>© 2025 Quotes App — Inspirado em Perdix</footer>
+        <footer>© 2025 Quotes App — Feito por <a href="https://perdix.com.br" target="_blank">Perdix</a></footer>
     </div>
     )
 }
