@@ -1,15 +1,12 @@
----
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend
-  namespace: default
+  name: frontend-service
 spec:
+  type: ClusterIP
   selector:
     app: frontend
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30080  # Porta exposta no host (pode ser entre 30000–32767)
-  type: NodePort

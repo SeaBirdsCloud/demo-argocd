@@ -1,9 +1,7 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
-  namespace: default
+  name: backend-deploy
 spec:
   replicas: 1
   selector:
@@ -15,7 +13,8 @@ spec:
         app: backend
     spec:
       containers:
-      - name: backend
-        image: perdixcloud/quotes-backend:1.0
-        ports:
-        - containerPort: 8000
+        - name: backend
+          image: perdixcloud/quotes-backend:1.1
+          ports:
+            - containerPort: 8000
+

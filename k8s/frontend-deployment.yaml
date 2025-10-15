@@ -1,9 +1,7 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
-  namespace: default
+  name: frontend-deploy
 spec:
   replicas: 1
   selector:
@@ -15,7 +13,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: frontend
-        image: perdixcloud/quotes-frontend:1.0
-        ports:
-        - containerPort: 80
+        - name: frontend
+          image: perdixcloud/quotes-frontend:1.3
+          ports:
+            - containerPort: 80
