@@ -5,7 +5,7 @@ function App() {
   const [quote, setQuote] = useState(null)
 
   const fetchQuote = async () => {
-    const res = await fetch('/api/quote')
+    const res = await fetch('/quote')
     const data = await res.json()
     setQuote(data)
   }
